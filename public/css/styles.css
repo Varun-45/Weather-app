@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar li {
+    margin-left: 2rem;
+}
+
+.navbar {
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.alag:hover {
+    color: #0097e6;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.sun {
+    color: #fff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.sun {
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+
+.main_header_left h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+}
+
+.main_header_left .btn-primary {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left .btn-primary :hover {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #1e272e;
+    background-color: #fff;
+    color: #0097e6;
+}
+
+footer {
+    width: 100%;
+    background-color: #1e272e;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 7rem;
+
+}
+
+.img2 {
+    width: 31.5rem;
+    height: 19.2rem;
+}
+
+@media (max-width:768px) {
+    .img2 {
+        display: none;
+    }
+}
+
+.txtinfo {
+    font-size: 2rem;
+}
+
+.row {
+    margin: 0;
+}
+
+.maiin {
+    width: 50rem;
+    height: 40rem;
+
+
+    margin: auto;
+    font-size: 4rem;
+    background-color: #F9F1F0;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 50%;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+}
+
+@media (max-width:768px) {
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+        width: 95%;
+        background: #f2f2f2;
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 20px 8px #d0d0d0;
+    }
+
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    text-align: justify;
+    color: black;
+    padding: 40px;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.flap {
+    width: 100%;
+    height: 100%;
+}
+
+.flap::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+
+    background-position: 100px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.flap::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    right: 0;
+
+    background-position: -200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.container:hover .flap::after {
+    transform: translatex(300px);
+}
+
+.container:hover .flap::before {
+    transform: translatex(-300px);
+}
