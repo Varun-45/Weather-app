@@ -135,4 +135,13 @@ input[type=submit] {
         font-size: 1.5rem;
 
     }
+
+    .namefield {
+        align-self: center;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2.5%;
+        height: 5rem;
+    }
+
 }
