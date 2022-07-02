@@ -15,8 +15,9 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <title>Weather page</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/feedbcak.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="images/1200x630wa.png" type="image/png" />
 </head>
 
@@ -27,11 +28,7 @@
                 <nav class="navbar navbar-expand-lg ">
                     <a class="navbar-brand" href="/"><img src="images/sun (4).svg" class="sun">Weather app<img
                             src="images/sun (4).svg" class="sun"></a>
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
+
                     <button class="navbar-toggler first-button bnt" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -59,57 +56,51 @@
             </div>
         </div>
     </div>
-    <!------>
-    <!-- <div class="container-fluid main_header">
-        <div class="row">
-            <div class="col-md-10 col-12 mx-auto">
-                <div class="row">
-                    -left
-                    <div class="col-md-12 col-12 main_header_left">
-                        <p>This is <b>Varun Malpani</b></p>
-                        <h1>I am a student studying in <span style="color: #0097e6;"> Indian Institute of Information
-                                Technology,Sricity.</span></h1>
 
-                    </div>
+    <div class="form-floating mb-3">
+        <form action="/feedback" method="POST" onsubmit="return false">
 
+            <input type=" text" class="comm_field namefield" id="name" name="name" placeholder="Name" required
+                autocomplete="off" />
+            <br>
+            <input type="text" class="comm_field namefield" id="comment" name="comment" placeholder="comment" required
+                autocomplete="off" />
+
+    </div>
+    <button type="submit" value="Submit" id="submit" class="com_btn" onClick="window.location.reload()">
+        <h3>Comment</h3>
+    </button>
+    </form>
+    <div class="row d-flex justify-content-center main_cont">
+        <div class="col-md-12 col-lg-10">
+            <div class="card text-dark">
+                <div class="card-body p-4">
+                    <h2 class="mb-0">
+                        <b>User Comments</b>
+                    </h2>
+                    <p class="fw-light mb-4 pb-2"></p>
+                    <% datalist.forEach(Comment=>{ %>
+                        <div class="d-flex flex-start" style="margin-top:1rem;">
+                            <img class="rounded-circle shadow-1-strong me-3" src="images/user.svg" alt="avatar"
+                                width="60" height="60" />
+                            <div>
+                                <h3 class="fw-bold mb-1" style="color: #0097e6;">
+                                    <%= Comment.name %>
+                                </h3>
+
+                                <h5 class="mb-0" style="margin-top: 0.75rem;">
+                                    <%= Comment.comment %>
+                                </h5>
+                            </div>
+                        </div>
+                        <% })%>
 
                 </div>
             </div>
         </div>
-    </div> -->
-    <div class="container">
-        <div class="content">
-            <h1 style="color: #0097e6; margin-bottom: 50px;">Varun</h1>
-            <h3 style="word-spacing: 0.15rem;">Hello I am Varun Malpani a first year student of <span
-                    style="color: #0097e6;">IIIT,Sricity</span>
-                studying B.tech in Electronics and communication
-                Engineering.I
-                enjoy
-                developing diffrent web-applications.I am trying to make my time
-                count.</h3>
-        </div>
-        <div class="flap"></div>
     </div>
 
-    <!--foot-->
-    <footer>
-        <div class="main_header container-fluid" style="background-color: white;">
-            <h2 style="font-weight: 600;">DROP A HI HERE:</h2>
-            <div class="col-md-8 mx-auto d-flex justify-content-center flex-nowrap">
-                <a href="https://www.instagram.com/varunmalpani.vm01/"><img src="./images/instagram (1).svg"
-                        alt="insta"></a>
-                <a href="https://github.com/Varun-45"><img src="./images/github.svg" alt="github"
-                        style="margin-left: 2rem;"></a>
-                <a href=https://www.linkedin.com/in/varun-malpani-aaa784233/"><img src="./images/linkedin (1).svg"
-                        alt="linkedin" style="margin-left: 2rem;"></a>
-
-            </div>
-
-        </div>
-        <p>© 2022 Copyright: <a href="https://www.linkedin.com/in/varun-malpani-aaa784233/"
-                style="color: white; text-decoration:none;">Varun</a></p>
-    </footer>
-    <script src="js/main2.js"></script>
+    <script src="../public/js/main.js"></script>
 </body>
 
 </html>
